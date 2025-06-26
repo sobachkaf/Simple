@@ -1,0 +1,24 @@
+.violet-button {
+    display: inline-block;
+    padding: 2.15rem 7.95rem;
+    color: $clr-violet;
+    font-size: $font-size-xm;
+    border: 1px solid $clr-violet;
+    transition: $transition-fast;
+    -webkit-transition: $transition-fast;
+    -moz-transition: $transition-fast;
+    -ms-transition: $transition-fast;
+    -o-transition: $transition-fast;
+    &:hover {
+        background-color: $clr-violet;
+        color: $clr-white;
+        transform: translateY(-0.2rem);
+        -webkit-transform: translateY(-0.2rem);
+        -moz-transform: translateY(-0.2rem);
+        -ms-transform: translateY(-0.2rem);
+        -o-transform: translateY(-0.2rem);
+    }
+    &:active{
+        @include click();
+    }
+}

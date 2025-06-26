@@ -1,0 +1,130 @@
+//* Адаптив
+@mixin respond-to($media) {
+    @if $media=="phone" {
+        @media (max-width: 420px) {
+            @content;
+        }
+    }
+
+    @else if $media=="tablet" {
+        @media (max-width: 510px) {
+            @content;
+        }
+    }
+
+    @else if $media=="laptop" {
+        @media (max-width: 1440px) {
+            @content;
+        }
+    }
+}
+
+@mixin click() {
+    position: relative;
+    top: 0.1rem;
+}
+
+//* Флекс миксины
+@mixin flex-row($justify: space-between, $align: center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-row-start() {
+    display: flex;
+    align-items: flex-start;
+}
+
+@mixin flex-row-center() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-row-end() {
+    display: flex;
+    align-items: flex-end;
+}
+
+@mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-start() {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@mixin flex-column-center() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-column-end() {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@mixin flex-column-reverse() {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@mixin flex-wrap() {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin flex-aligning() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-sapce-around() {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flex-sapce-between() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-sapce-bw() {
+    display: flex;
+    justify-content: space-between;
+}
+
+//* Анимации
+@mixin textShadow() {
+    &:hover {
+        transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+        -moz-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -o-transform: scale(1.02);
+        text-shadow: 0.1rem 0.1rem 2px red, 0 0 1em blue, 0 0 0.2em blue;
+    }
+
+    &:active {
+        transform: translateY(.5rem) scale(1.02);
+        -webkit-transform: translateY(.5rem) scale(1.02);
+        -moz-transform: translateY(.5rem) scale(1.02);
+        -ms-transform: translateY(.5rem) scale(1.02);
+        -o-transform: translateY(.5rem) scale(1.02);
+    } 
+}
+
+@mixin animation() {
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
